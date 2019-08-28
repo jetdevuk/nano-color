@@ -1,4 +1,4 @@
-# Nano-Color
+# Nano-RGB
 
 A tiny (108B) chalk replacement for simple RGB terminal text.
 
@@ -19,10 +19,16 @@ const red = () => rgb(255,0,0)
 console.log(mix(red, 'This is red and reset now.'))
 ```
 
+Finally there is the utility function ```reset``` that always returns the command line to the default color.
+
+```js
+console.log(rgb(255,0,0) + 'This is red now.' + reset() + ' And this is reset.')
+```
+
 Here's a full example that does some weird color stuff, enjoy.
 
 ```js
-const { rgb } = require('nano-color')
+const { rgb } = require('nano-rgb')
 for (let i = 0; i < 25; i++) {
   let out = '';
   for (let y = 0; y < 25; y++) {

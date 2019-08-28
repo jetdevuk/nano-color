@@ -1,7 +1,7 @@
 {
-    "name": "nano-color",
-    "version": "1.0.0",
-    "main": "main.js",
-    "license": "MIT",
-    "dependencies": {}
+  "name": "nano-rgb",
+  "version": "1.0.1",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {}
 }
