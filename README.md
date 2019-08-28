@@ -1,6 +1,6 @@
 # Nano-RGB
 
-A tiny (108B) chalk replacement for simple RGB terminal text.
+A tiny (~200B) chalk replacement for simple RGB terminal text.
 
 ## Usage
 
@@ -15,7 +15,7 @@ console.log(rgb(255,0,0) + 'This is red now.')
 The second ```mix``` takes an RGB function and a message string, then returns the colored and reset string.
 
 ```js
-const red = () => rgb(255,0,0)
+const red = rgb(255,0,0)
 console.log(mix(red, 'This is red and reset now.'))
 ```
 
