@@ -1,26 +1,33 @@
 # Nano-Color
 
-A tiny (63B) chalk replacement for people who aren't afraid to keep an ANSI 3/4 bit color chart at their workstation.
+A tiny (108B) chalk replacement for simple RGB terminal text.
 
 ## Usage
 
 There are two functions. 
 
-The first "```col```" injects a string with an ANSI code after the escape sequence.
+The first ```rgb``` injects a string with an ANSI RGB code after the escape sequence, all you need to worry about is the RGB.
 
 ```js
-console.log(col(31) + 'This is red now.')
+console.log(rgb(255,0,0) + 'This is red now.')
 ```
 
-The second "```mix```" takes an ANSI code and a message string, then returns the colored and reset string.
+The second ```mix``` takes an RGB function and a message string, then returns the colored and reset string.
 
 ```js
-console.log(mix(31, 'This is red and reset now.'))
+const red = () => rgb(255,0,0)
+console.log(mix(red, 'This is red and reset now.'))
 ```
 
-You can also nest ```mix``` statements:
+Here's a full example that does some weird color stuff, enjoy.
 
 ```js
-const port = 4052;
-console.log(`Server listening @ ${mix(1, mix(33, port))}`)
+const { rgb } = require('nano-color')
+for (let i = 0; i < 25; i++) {
+  let out = '';
+  for (let y = 0; y < 25; y++) {
+    out += rgb(222 - (3 * y), 255 - (10 * i), 0 + (y * i)) + '><'
+  }
+  console.log(out);
+}
 ```
