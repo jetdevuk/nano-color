@@ -1,1 +1,1 @@
-const r=()=>'\x1b[0m';module.exports={reset:r,rgb:(r,g,b)=>`\x1b[38;2;${r};${g};${b}m`,mix:(c,m)=>c()+m+r()}
+const r=()=>'\x1b[0m';module.exports={reset:r,rgb:(r,g,b)=>`\x1b[38;2;${r};${g};${b}m`,mix:(c,m)=>c+m+r()}
