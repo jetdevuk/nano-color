@@ -1,0 +1,1 @@
+module.exports={col:c=>`\x1b[${c}m`,mix:(c,m)=>col(c)+m+col(0)}
